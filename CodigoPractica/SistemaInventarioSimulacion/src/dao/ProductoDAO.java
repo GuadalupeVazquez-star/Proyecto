@@ -8,6 +8,9 @@ import java.util.List; //interfaz List
 
 public class ProductoDAO { //clase publica
     private final String URL = "jdbc:sqlite:inventario.db"; //ruta de la BD. jdbc:sqlite:, inventario.db = nombre del archivo, final = variable que no cambia
+    private Connection conectar() throws SQLException{
+        return DriverManager.getConnection(URL);
+    }
 
     public ProductoDAO() { //M constructor
         try (Connection conn = DriverManager.getConnection(URL)) { //intenta conectarse a la BD. si no existe inventario.db, lo crea

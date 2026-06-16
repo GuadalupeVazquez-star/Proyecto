@@ -7,7 +7,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class MotorSimulacion extends SwingWorker<Void, String> { //hereda de SwingWorker. Void = no regresa nada al final, 
+public class MotorSimulacion extends SwingWorker<Void, Evento> { //hereda de SwingWorker. Void = no regresa nada al final,
+//public class MotorSimulacion extends SwingWorker<Void, String> { se hizo el cambio a Evento
+    
     private PriorityQueue<Evento> colaEventos = new PriorityQueue<>(); //cola que ordena eventos por fecha sola 
     private ProductoDAO dao = new ProductoDAO(); //para guardar en BD
     private List<Producto> productos; //lista de productos
@@ -39,7 +41,8 @@ public class MotorSimulacion extends SwingWorker<Void, String> { //hereda de Swi
             Thread.sleep(velocidadMs); //pausa para ver la simulacion en camara lenta
             
             String log = procesarEvento(e); //procesa y guarda el texto del log
-            publish(log); // Manda el log a la UI, publish() = manda a process() que corre en hilo de UI
+            publish(e); // Manda el log a la UI, publish() = manda a process() que corre en hilo de UI
+            //publish(log); se hizo el cambio a publish(e);
         }
         return null; //termina
     }
@@ -70,12 +73,14 @@ public class MotorSimulacion extends SwingWorker<Void, String> { //hereda de Swi
         return ""; //por si acaso
     }
 
-    @Override //este metodo corre el hilo de Swing, 
-    protected void process(List<String> logs) {
-        for (String log : logs) { //por cada evento
-            System.out.println(log); 
-        }
-    }
+    //@Override //este metodo corre el hilo de Swing, 
+    //protected void process(List<String> logs) {
+    //    for (String log : logs) { //por cada evento
+    //        System.out.println(log); 
+    //    }
+    //}
+    
+    //se hizo el cambio y borramos el metodo process de la clase MotorSimulacion y se va a sobreescribir en VentanaPrincipal.java
     
     public void detener() { ejecutando = false; } //para parar el while
     public void setVelocidad(int ms) { velocidadMs = ms; } //cambiar velocidad desde el slider
