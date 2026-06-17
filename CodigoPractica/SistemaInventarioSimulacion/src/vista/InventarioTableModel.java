@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InventarioTableModel extends AbstractTableModel {
-    private final String[] columnas = {"ID", "Producto", "Stock", "Mínimo", "Estado"};
+    private final String[] columnas = {"ID", "Producto", "Stock", "Mínimo", "Precio", "Estado"};
     private List<Producto> productos = new ArrayList<>();
 
     public void setProductos(List<Producto> productos) {
@@ -36,7 +36,8 @@ public class InventarioTableModel extends AbstractTableModel {
             case 1: return p.getNombre();
             case 2: return p.getStockActual();
             case 3: return p.getStockMinimo();
-            case 4: return p.necesitaReorden()? "REORDENAR" : "OK";
+            case 4: return p.getPrecio();
+            case 5: return p.necesitaReorden()? "REORDENAR" : "OK";
             default: return "";
         }
     }

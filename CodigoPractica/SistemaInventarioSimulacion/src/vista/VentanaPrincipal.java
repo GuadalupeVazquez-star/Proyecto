@@ -65,6 +65,7 @@ public class VentanaPrincipal extends JFrame {
                 for (Evento e : eventos) {
                     String log = e.getTipo() + ": " + e.getCantidad() + " " +
                                  e.getProducto().getNombre() + " | Stock: " +
+                            e.getProducto().getPrecio() +
                                  e.getProducto().getStockActual();
                     txtLog.append(log + "\n");
 
