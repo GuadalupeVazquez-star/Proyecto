@@ -1,24 +1,27 @@
-package vista;
+package vista; //paquete vista 
 
+//importa las clases (MotorSimulacion) = el hilo que simula,(Evento) = demanda/entrega, (ProductoDAO) = acceso a MySQL, (Producto) = el modelo
 import simulacion.MotorSimulacion;
 import simulacion.Evento;
 import dao.ProductoDAO;
 import modelo.Producto;
-import javax.swing.*;
-import java.awt.*;
-import java.util.Date;
+import javax.swing.*;  //todos los componentes JFrame, JButton,JTable
+import java.awt.*;     //layouts como BorderLayout
+import java.util.Date; //para las fechas de la grafica
 
-public class VentanaPrincipal extends JFrame {
-    private JTextArea txtLog = new JTextArea(8, 50);
-    private InventarioTableModel modeloTabla = new InventarioTableModel();
-    private JTable tablaInventario = new JTable(modeloTabla);
-    private PanelGrafica panelGrafica = new PanelGrafica();
-    private JButton btnIniciar = new JButton("Iniciar");
+public class VentanaPrincipal extends JFrame { //crea una ventana. extends JFrame = Heresa todo lo de una ventana de Swing
+    private JTextArea txtLog = new JTextArea(8, 50); //area de texto de 8 filas x 50 columnas. se imprime cada DEMANDA/ENTREGA
+    private InventarioTableModel modeloTabla = new InventarioTableModel(); //crea el modelo de la tabla perzonalizada que se explico
+    private JTable tablaInventario = new JTable(modeloTabla);  //crea la JTable y le conecta el modelo. sin esto la tabla estaria vacia
+    private PanelGrafica panelGrafica = new PanelGrafica();  //crea el panel con la grafica JFreChart que se explico
+    // crear los 2 botones con los textos
+    private JButton btnIniciar = new JButton("Iniciar");    
     private JButton btnDetener = new JButton("Detener");
-    private JSlider sliderVelocidad = new JSlider(50, 2000, 500);
-    private MotorSimulacion motor;
-    private ProductoDAO dao = new ProductoDAO();
+    private JSlider sliderVelocidad = new JSlider(50, 2000, 500); //Slider de velocidad, minimo 50 milisegundos, maximo 2000ms, valor inicial 500ms
+    private MotorSimulacion motor; //motor crea hastq que se presiona iniciar 
+    private ProductoDAO dao = new ProductoDAO();  //dao lo crea de una vez para leer MySQL
 
+    //constructor VentanaPrincipal
     public VentanaPrincipal() {
         setTitle("Sistema Inteligente de Inventarios");
         setSize(1000, 700);

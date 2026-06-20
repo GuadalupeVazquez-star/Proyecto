@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/BICHIYAL/Documents/Proyecto/Proyecto/CodigoPractica/SistemaInventarioSimulacion/src/simulacion/GeneradorDemanda.java</file>
             <file>file:/C:/Users/BICHIYAL/Documents/Proyecto/Proyecto/CodigoPractica/SistemaInventarioSimulacion/src/vista/InventarioTableModel.java</file>
-            <file>file:/C:/Users/BICHIYAL/Documents/Proyecto/Proyecto/CodigoPractica/SistemaInventarioSimulacion/src/dao/TestBD.java</file>
+            <file>file:/C:/Users/BICHIYAL/Documents/Proyecto/Proyecto/CodigoPractica/SistemaInventarioSimulacion/src/simulacion/Evento.java</file>
             <file>file:/C:/Users/BICHIYAL/Documents/Proyecto/Proyecto/CodigoPractica/SistemaInventarioSimulacion/src/vista/VentanaPrincipal.java</file>
-            <file>file:/C:/Users/BICHIYAL/Documents/Proyecto/Proyecto/CodigoPractica/SistemaInventarioSimulacion/src/dao/TestDriver.java</file>
+            <file>file:/C:/Users/BICHIYAL/Documents/Proyecto/Proyecto/CodigoPractica/SistemaInventarioSimulacion/src/simulacion/MotorSimulacion.java</file>
             <file>file:/C:/Users/BICHIYAL/Documents/Proyecto/Proyecto/CodigoPractica/SistemaInventarioSimulacion/src/dao/ProductoDAO.java</file>
             <file>file:/C:/Users/BICHIYAL/Documents/Proyecto/Proyecto/CodigoPractica/SistemaInventarioSimulacion/src/vista/PanelGrafica.java</file>
             <file>file:/C:/Users/BICHIYAL/Documents/Proyecto/Proyecto/CodigoPractica/SistemaInventarioSimulacion/src/modelo/Producto.java</file>
