@@ -55,9 +55,15 @@ SistemaInventarioSimulacion[Main]
 - Proyecto
  - CodigoPractica
    - SistemaInventarioSimulacion
-     - scr (scr
+     - scr (scr)
        - (paquetes con cada código)
 ## Instrucciones para descargar el codigo:
+- Tener instalado Java con el id Apache Netbeans
+- Instalar MySQL para la base de datos
+- Crear la carpeta principal en Netbeans con el nombre de SistemaInventarioSimulacion
+- Realizar las clases en dichos paquetes de java (en Netbeans)
+- Copiar y pegar los códigos del repositorio de github que dichos códigos vienen dentro de la estructura del proyecto en git
+- Verificar que la estructura este bien elaborada y quede como en "Estructura del proyecto en Java"
 
 
 
