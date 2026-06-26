@@ -55,8 +55,8 @@ SistemaInventarioSimulacion[Main]
 - Proyecto
  - CodigoPractica
    - SistemaInventarioSimulacion
-     - scr
-       - (paquetes)
+     - scr (scr
+       - (paquetes con cada código)
 ## Instrucciones para descargar el codigo:
 
 
